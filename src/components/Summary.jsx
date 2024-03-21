@@ -3,7 +3,8 @@ import { CiCircleInfo } from "react-icons/ci";
 
 
 const Summary = ({ pointer1 }) => {
-  const leftPosition = `${pointer1}%`;
+  const leftPosition = `${pointer1}`;
+  console.log(leftPosition)
   return (
     <div className="p-3 shadow-md min-h-[335px] bg-white rounded-lg bg-primary">
       <div className='flex items-center justify-between'>
@@ -14,12 +15,12 @@ const Summary = ({ pointer1 }) => {
         <div className='mt-[20px] flex justify-center'>
           <div className='relative flex items-center justify-center'>
             {/* Placeholder image */}
-            <img src="https://technicals.zerodha.com/static/media/bar.8505e185.svg" alt="" className='w-full' />
+            <img src="https://technicals.zerodha.com/static/media/bar.8505e185.svg" alt="slider" className='w-full' />
             {/* Pointer image */}
             <img
               src="https://technicals.zerodha.com/static/media/pointer.c2b2a6c5.svg"
-              alt=""
-              className={`w-[5%] absolute transform -translate-x-1/2 left-${leftPosition}`} 
+              alt="pointer"
+              className={`w-[5%] absolute transform -translate-x-1/2 left-[${leftPosition}%]`} 
             />
           </div>
         </div>
